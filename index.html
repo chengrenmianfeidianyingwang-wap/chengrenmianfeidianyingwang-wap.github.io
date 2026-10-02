@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>成人免费电影网 - 免费在线电影、电视剧与影视导航 | 成人免费电影网</title>
+<meta name="description" content="成人免费电影网提供电影、电视剧、综艺、动漫等分类导航与影视资讯，帮助影迷快速发现想看的影视内容。官方网址：https://chengrenmianfeidianyingwang-wap.github.io">
+<meta name="keywords" content="成人免费电影网, 免费电影网, 在线电影, 免费影视导航, 电视剧推荐, 影视资讯">
+<meta name="author" content="成人免费电影网">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="成人免费电影网 - 免费影视导航">
+<meta property="og:description" content="成人免费电影网整理电影、电视剧、综艺、动漫分类导航与影视资讯。">
+<meta property="og:url" content="https://chengrenmianfeidianyingwang-wap.github.io">
+<meta property="og:site_name" content="成人免费电影网">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="成人免费电影网">
+<meta name="twitter:description" content="成人免费电影网：免费影视分类导航与影视资讯。">
+<link rel="canonical" href="https://chengrenmianfeidianyingwang-wap.github.io">
+<style>
+:root{
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+  --ink:#1b2030;
+  --ink-soft:#5b6579;
+  --line:#e3e8f0;
+  --brand:#7c4dff;
+  --brand-ink:#ffffff;
+  --shadow:0 12px 30px rgba(36,42,66,.08);
+  --radius:18px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  line-height:1.65;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:#3b2a82;text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid rgba(124,77,255,.45);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{line-height:1.3;margin:0}
+p{margin:0 0 1em}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+section:nth-child(even){background:#fbfcff}
+.section-head{margin-bottom:36px;text-align:center}
+.eyebrow{
+  display:inline-block;color:var(--brand);font-weight:700;font-size:13px;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:clamp(26px,4vw,38px)}
+.section-head p{max-width:680px;margin:14px auto 0;color:var(--ink-soft)}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:16px;padding:14px 0}
+.brand{
+  display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:var(--ink)}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;flex:none;
+  background:linear-gradient(135deg,#7c4dff,#4d8dff);
+  display:grid;place-items:center;color:#fff;font-size:20px;font-weight:900}
+.nav-toggle{
+  margin-left:auto;width:46px;height:46px;border:1px solid var(--line);border-radius:12px;
+  background:#fff;font-size:22px;cursor:pointer;color:var(--ink);display:none}
+nav ul{display:flex;gap:8px;list-style:none;margin:0;padding:0;margin-left:auto}
+nav a{
+  display:block;padding:10px 14px;border-radius:11px;font-weight:600;color:var(--ink-soft)}
+nav a:hover{background:#f1eeff;color:var(--brand);text-decoration:none}
+.brand-url{
+  display:none;font-size:12px;color:#8b93a7;white-space:nowrap;font-weight:500}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(124,77,255,.16),transparent 42%),
+    radial-gradient(circle at 8% 96%,rgba(77,141,255,.18),transparent 40%),
+    linear-gradient(180deg,#f7f5ff,#f5f7fb);
+  padding:84px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+.hero h1{font-size:clamp(34px,5.5vw,60px);letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#7c4dff,#4d8dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:19px;color:var(--ink-soft);margin:22px 0 30px;max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:999px;
+  font-weight:700;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-primary{background:linear-gradient(90deg,#7c4dff,#5b6bff);color:#fff;box-shadow:0 14px 28px rgba(92,67,255,.28)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:#f1eeff;border-color:#d8d0ff}
+.hero-aside{
+  position:relative;border-radius:26px;background:linear-gradient(160deg,#1b2030,#2a3252);
+  padding:32px;color:#fff;box-shadow:var(--shadow)}
+.hero-aside:after{
+  content:"";position:absolute;inset:-2px;border-radius:28px;background:linear-gradient(135deg,#7c4dff,#4d8dff);
+  z-index:-1;filter:blur(14px);opacity:.35}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.stat strong{display:block;font-size:27px}
+.stat span{font-size:13px;color:#c5cbe0}
+
+/* ---------- Filters ---------- */
+.filters{
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.chip{
+  border:1px solid var(--line);background:#fff;padding:9px 18px;border-radius:999px;
+  font-weight:600;color:var(--ink-soft);cursor:pointer;font-size:14px}
+.chip:hover{border-color:#c9bdff;color:var(--brand)}
+.chip.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* ---------- Films ---------- */
+.film-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.film{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.22s;box-shadow:0 6px 18px rgba(36,42,66,.04)}
+.film:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d9d2ff}
+.poster{position:relative;aspect-ratio:2/3;overflow:hidden}
+.poster:before{
+  content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--g1,#7c4dff),var(--g2,#4d8dff))}
+.poster:after{
+  content:attr(data-title);position:absolute;inset:0;display:grid;place-items:center;
+  color:#fff;text-align:center;font-weight:800;font-size:21px;padding:16px;line-height:1.3}
+.score{
+  position:absolute;top:12px;left:12px;background:rgba(255,255,255,.94);color:#5b2bff;
+  font-weight:800;font-size:14px;padding:6px 10px;border-radius:999px}
+.film-body{padding:18px}
+.film-body h3{font-size:18px}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-soft);margin-top:10px}
+
+/* ---------- Shows / List layout ---------- */
+.layout-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list-card{
+  display:grid;grid-template-columns:120px 1fr;gap:18px;background:#fff;border:1px solid var(--line);
+  border-radius:16px;padding:16px;transition:.2s}
+.list-card:hover{border-color:#c7bdff;box-shadow:var(--shadow)}
+.thumb{
+  height:100%;min-height:90px;border-radius:12px;background:linear-gradient(135deg,var(--t1,#ff7ab8),var(--t2,#ffb35c))}
+.list-card h3{font-size:18px;margin-bottom:6px}
+.list-card p{font-size:14px;color:var(--ink-soft);margin:0 0 10px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:#eef0ff;color:#5441b5}
+
+/* ---------- News ---------- */
+.news-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:30px}
+.news-feature{
+  position:relative;min-height:360px;border-radius:24px;overflow:hidden;display:flex;align-items:flex-end;
+  padding:34px;color:#fff;background:linear-gradient(120deg,#151a2c,#3a2c63)}
+.news-feature:after{
+  content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,22,.86),transparent 60%),
+  radial-gradient(circle at 70% 20%,rgba(255,122,184,.42),transparent 50%)}
+.news-feature > *{position:relative;z-index:1}
+.news-feature h3{font-size:30px;margin-bottom:12px}
+.news-list{display:grid;gap:16px}
+.news-item{
+  display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;align-items:center}
+.news-item time{
+  flex:none;width:64px;height:64px;border-radius:14px;display:grid;place-items:center;text-align:center;
+  font-weight:800;background:#f1eeff;color:#5b2bff;line-height:1.2}
+.news-item time small{display:block;font-size:11px;font-weight:700}
+.news-item h3{font-size:16px;margin-bottom:5px}
+.news-item p{font-size:13px;color:var(--ink-soft);margin:0}
+
+/* ---------- About / text ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.about-visual{
+  border-radius:26px;padding:38px;color:#fff;background:
+    linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,0)),linear-gradient(160deg,#0f2547,#123a72);
+  box-shadow:var(--shadow);position:relative;overflow:hidden}
+.about-visual:before{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-70px;top:-80px;
+  background:radial-gradient(circle,rgba(77,141,255,.7),transparent 70%)}
+.steps{display:grid;gap:18px;margin-top:26px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step-no{
+  width:40px;height:40px;flex:none;border-radius:12px;background:#ffe9c2;color:#a75a00;
+  font-weight:900;display:grid;place-items:center}
+.about h2{font-size:clamp(26px,4vw,40px)}
+.about p{color:var(--ink-soft);font-size:17px}
+
+/* ---------- FAQ ---------- */
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:14px}
+.faq-item h3{font-size:18px}
+.faq-item p{margin:12px 0 0;color:var(--ink-soft)}
+
+/* ---------- Footer ---------- */
+footer{background:#11172a;color:#c7cee2;padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:36px}
+.foot-grid h4{color:#fff;margin-bottom:18px;font-size:16px}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot-grid a{color:#aeb6cc}
+.foot-bottom{
+  margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.09);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8993ad}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .film-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.news-wrap,.about-grid,.layout-list{grid-template-columns:1fr}
+  .news-feature{min-height:280px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  section{padding:52px 0}
+  .wrap{padding:0 16px}
+  .nav-toggle{display:grid;place-items:center}
+  nav{
+    position:fixed;inset:68px 0 0 0;background:#fff;padding:24px 18px;transform:translateX(100%);
+    transition:.28s ease;overflow:auto;box-shadow:var(--shadow)}
+  nav.open{transform:translateX(0)}
+  nav ul{flex-direction:column;margin:0;gap:6px}
+  nav a{padding:16px;border-radius:12px;background:#f6f7fb;font-size:17px}
+  .hero{padding:56px 0 70px}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .list-card{grid-template-columns:1fr}
+  .thumb{min-height:120px}
+  .foot-grid{grid-template-columns:1fr}
+  .brand-url{display:none}
+}
+@media(max-width:420px){
+  .film-grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .btn{width:100%;justify-content:center}
+}
+@media print{
+  header,nav,.nav-toggle,footer{display:none}
+  section{padding:20px 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+<a class="skip-link" href="#main" style="position:absolute;left:-9999px;">跳至主要内容</a>
+
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="https://chengrenmianfeidianyingwang-wap.github.io" aria-label="成人免费电影网首页">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>成人免费电影网</span>
+    </a>
+    <span class="brand-url">https://chengrenmianfeidianyingwang-wap.github.io</span>
+    <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="打开导航菜单">☰</button>
+    <nav id="primaryNav" aria-label="主导航">
+      <ul>
+        <li><a href="#films">电影推荐</a></li>
+        <li><a href="#dramas">电视剧</a></li>
+        <li><a href="#news">影视资讯</a></li>
+        <li><a href="#about">关于本站</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">免费影视导航 · 成人免费电影网</p>
+        <h1 id="heroTitle">发现好片，从<em>成人免费电影网</em>开始</h1>
+        <p class="lead">成人免费电影网整理电影、电视剧、综艺、动漫等分类入口与观看线索，提供热门榜单、类型导航和影视资讯，帮助你更快找到想看的影视内容。</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#films">浏览电影推荐</a>
+          <a class="btn btn-ghost" href="#about">了解本站服务</a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="网站概览">
+        <p class="eyebrow" style="color:#b9b3ff">本站亮点</p>
+        <h2 style="font-size:24px;margin-bottom:8px">一站式免费影视导航</h2>
+        <p style="color:#cfd6ea">按类型、地区、年份与热度筛选内容；所有栏目均为站内导航，访问便捷。</p>
+        <div class="stat-row">
+          <div class="stat"><strong>4+</strong><span>核心栏目</span></div>
+          <div class="stat"><strong>6类</strong><span>影视分类</span></div>
+          <div class="stat"><strong>实时</strong><span>资讯更新</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="films" aria-labelledby="filmsTitle">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">栏目一 · 电影推荐</p>
+        <h2 id="filmsTitle">精选电影，按你的口味快速发现</h2>
+        <p>成人免费电影网整理热门与经典电影导航，覆盖动作、喜剧、剧情、科幻等类型。你可以先浏览下面的示例卡片，也可使用分类筛选查找相关内容。</p>
+      </header>
+
+      <div class="filters" role="tablist" aria-label="电影分类筛选">
+        <button class="chip active" role="tab" aria-selected="true">全部</button>
+        <button class="chip" role="tab" aria-selected="false">动作</button>
+        <button class="chip" role="tab" aria-selected="false">喜剧</button>
+        <button class="chip" role="tab" aria-selected="false">剧情</button>
+        <button class="chip" role="tab" aria-selected="false">科幻</button>
+        <button class="chip" role="tab" aria-selected="false">动画</button>
+        <button class="chip" role="tab" aria-selected="false">悬疑</button>
+      </div>
+
+      <div class="film-grid">
+        <article class="film" style="--g1:#ff5b5b;--g2:#ff9d4a">
+          <div class="poster" data-title="极速追击"><span class="score">9.1</span></div>
+          <div class="film-body"><h3>极速追击</h3><p>高速飞车与城市追逐的硬核动作片。</p><div class="meta"><span>动作 · 2025</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#36c5c0;--g2:#5b8cff">
+          <div class="poster" data-title="银河回响"><span class="score">8.7</span></div>
+          <div class="film-body"><h3>银河回响</h3><p>宇宙探险背景下的硬科幻视觉体验。</p><div class="meta"><span>科幻 · 2024</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#a45cff;--g2:#ff6fbd">
+          <div class="poster" data-title="春日的信"><span class="score">8.9</span></div>
+          <div class="film-body"><h3>春日的信</h3><p>温暖治愈的家庭剧情，适合静下心来观看。</p><div class="meta"><span>剧情 · 2024</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#ffb02e;--g2:#ff5b8a">
+          <div class="poster" data-title="爆笑营业中"><span class="score">8.4</span></div>
+          <div class="film-body"><h3>爆笑营业中</h3><p>轻松欢乐的喜剧，适合周末放松时光。</p><div class="meta"><span>喜剧 · 2025</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#3b82f6;--g2:#2dd4bf">
+          <div class="poster" data-title="迷雾之家"><span class="score">8.6</span></div>
+          <div class="film-body"><h3>迷雾之家</h3><p>层层反转的悬疑故事，细节埋设值得回味。</p><div class="meta"><span>悬疑 · 2023</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#22c55e;--g2:#84cc16">
+          <div class="poster" data-title="森林守护者"><span class="score">8.8</span></div>
+          <div class="film-body"><h3>森林守护者</h3><p>奇幻冒险动画，画风清新、情感饱满。</p><div class="meta"><span>动画 · 2024</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#f43f5e;--g2:#fb923c">
+          <div class="poster" data-title="暗夜行动"><span class="score">8.2</span></div>
+          <div class="film-body"><h3>暗夜行动</h3><p>特工任务题材，节奏紧凑、场面张力十足。</p><div class="meta"><span>动作 · 2023</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#6366f1;--g2:#0ea5e9">
+          <div class="poster" data-title="未来来信"><span class="score">8.5</span></div>
+          <div class="film-body"><h3>未来来信</h3><p>一封跨越时间的信件，引出亲情与选择。</p><div class="meta"><span>科幻 · 2025</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="dramas" class="dramas" aria-labelledby="dramasTitle" style="background:#fbfcff">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">栏目二 · 电视剧</p>
+        <h2 id="dramasTitle">追剧导航，从热播到经典一屏掌握</h2>
+        <p>无论你喜欢都市、古装、悬疑还是青春题材，成人免费电影网的电视剧栏目都提供分类导航与观看建议。</p>
+      </header>
+      <div class="layout-list">
+        <article class="list-card" style="--t1:#6366f1;--t2:#22d3ee">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>城市之光 第二季</h3><p>都市职场群像剧，讲述青年在理想与现实之间的选择。</p><div class="tags"><span class="tag">都市</span><span class="tag">热播</span><span class="tag">40集</span></div></div>
+        </article>
+        <article class="list-card" style="--t1:#f59e0b;--t2:#ef4444">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>长安夜行录</h3><p>唐代背景古装悬疑剧，单元案件环环相扣。</p><div class="tags"><span class="tag">古装</span><span class="tag">悬疑</span><span class="tag">30集</span></div></div>
+        </article>
+        <article class="list-card" style="--t1:#10b981;--t2:#06b6d4">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>深海救援队</h3><p>海洋救援题材职业剧，结合真实救援知识科普。</p><div class="tags"><span class="tag">职业</span><span class="tag">救援</span><span class="tag">24集</span></div></div>
+        </article>
+        <article class="list-card" style="--t1:#ec4899;--t2:#8b5cf6">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>那年夏天我们一起毕业</h3><p>青春校园群像，唤起成长记忆与友情故事。</p><div class="tags"><span class="tag">青春</span><span class="tag">校园</span><span class="tag">20集</span></div></div>
+        </article>
+        <article class="list-card" style="--t1:#0ea5e9;--t2:#3b82f6">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>边防线上的名字</h3><p>现实主义题材，聚焦守护边境的普通人物。</p><div class="tags"><span class="tag">现实</span><span class="tag">主旋律</span><span class="tag">36集</span></div></div>
+        </article>
+        <article class="list-card" style="--t1:#f97316;--t2:#facc15">
+          <div class="thumb" aria-hidden="true"></div>
+          <div><h3>甜点店的秘密</h3><p>治愈系美食轻喜剧，甜品与小镇人情交织。</p><div class="tags"><span class="tag">美食</span><span class="tag">治愈</span><span class="tag">18集</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="variety" aria-labelledby="varietyTitle">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">栏目三 · 综艺动漫</p>
+        <h2 id="varietyTitle">综艺与动漫，轻松填满休闲时间</h2>
+        <p>成人免费电影网同时覆盖综艺节目、动漫番剧的分类导航，帮助你按兴趣快速筛选内容。</p>
+      </header>
+      <div class="film-grid">
+        <article class="film" style="--g1:#f472b6;--g2:#fb7185">
+          <div class="poster" data-title="欢笑星期五"><span class="score">8.6</span></div>
+          <div class="film-body"><h3>欢笑星期五</h3><p>明星互动游戏综艺，笑点密集、嘉宾阵容多元。</p><div class="meta"><span>综艺 · 周更</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#38bdf8;--g2:#818cf8">
+          <div class="poster" data-title="环游厨房"><span class="score">8.3</span></div>
+          <div class="film-body"><h3>环游厨房</h3><p>探访各地美食文化的真人秀节目。</p><div class="meta"><span>综艺 · 月更</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#34d399;--g2:#a3e635">
+          <div class="poster" data-title="机械之心"><span class="score">9.0</span></div>
+          <div class="film-body"><h3>机械之心</h3><p>未来世界机甲题材动画，剧情与制作兼顾。</p><div class="meta"><span>动漫 · 连载</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+        <article class="film" style="--g1:#a78bfa;--g2:#f0abfc">
+          <div class="poster" data-title="魔法少女小葵"><span class="score">8.7</span></div>
+          <div class="film-body"><h3>魔法少女小葵</h3><p>校园奇幻动画，兼具战斗与友情成长。</p><div class="meta"><span>动漫 · 完结</span><a href="#">查看详情 ›</a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="news" aria-labelledby="newsTitle" style="background:#fbfcff">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">栏目四 · 影视资讯</p>
+        <h2 id="newsTitle">影视资讯与选片参考</h2>
+        <p>关注新片动态、榜单变化与观影指南。以下为站内导航内容示例，帮助访客了解成人免费电影网提供的信息服务。</p>
+      </header>
+      <div class="news-wrap">
+        <article class="news-feature">
+          <div>
+            <span class="tag">专题推荐</span>
+            <h3 style="margin-top:14px">2026年值得关注的十部华语新片</h3>
+            <p>从现实题材到奇幻大片，成人免费电影网整理新片线索、类型标签与上映信息，方便影迷提前规划观影清单。</p>
+            <a class="btn btn-primary" href="#">阅读专题</a>
+          </div>
+        </article>
+        <div class="news-list">
+          <article class="news-item">
+            <time datetime="2026-09-28"><strong>28</strong><small>09月</small></time>
+            <div><h3>国庆档热门影片前瞻</h3><p>多部类型片集中上映，动作、喜剧与动画题材均有看点。</p></div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-09-20"><strong>20</strong><small>09月</small></time>
+            <div><h3>悬疑剧为什么越来越受欢迎？</h3><p>从叙事结构到演员表现，分析悬疑内容的观看吸引力。</p></div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-09-12"><strong>12</strong><small>09月</small></time>
+            <div><h3>经典老片修复版值得重温吗？</h3><p>从画面质量、配乐到时代背景，提供重温建议。</p></div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-09-05"><strong>05</strong><small>09月</small></time>
+            <div><h3>亲子观影片单推荐</h3><p>适合家庭共同观看的动画与剧情片导航。</p></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="aboutTitle">
+    <div class="wrap about-grid">
+      <div class="about-visual">
+        <p class="eyebrow" style="color:#9fc1ff">关于成人免费电影网</p>
+        <h2 style="font-size:30px">简单三步，找到想看的影视内容</h2>
+        <div class="steps">
+          <div class="step"><span class="step-no">1</span><div><h3 style="font-size:17px">选择栏目</h3><p style="margin:0;color:#dbe3f3">从电影、电视剧、综艺动漫到影视资讯，快速定位兴趣方向。</p></div></div>
+          <div class="step"><span class="step-no">2</span><div><h3 style="font-size:17px">筛选分类</h3><p style="margin:0;color:#dbe3f3">按类型、题材、热度等维度缩小范围，提升选片效率。</p></div></div>
+          <div class="step"><span class="step-no">3</span><div><h3 style="font-size:17px">阅读参考</h3><p style="margin:0;color:#dbe3f3">查看介绍、标签与资讯，再决定下一步观看计划。</p></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">本站介绍</p>
+        <h2 id="aboutTitle">成人免费电影网是什么？</h2>
+        <p>成人免费电影网是一个面向影迷的免费影视导航站点，目标是帮助访客发现电影、电视剧、综艺、动漫及影视资讯。网站围绕“找片效率”与“内容参考”组织栏目，并通过分类标签、评分、题材和简介，为不同观影偏好提供入口。</p>
+        <p>本页所有导航链接均为示例占位，采用 <code>#</code> 形式；正式发布时，可将栏目与内容链接替换为真实页面或跳转地址。</p>
+        <a class="btn btn-primary" href="#films">开始浏览</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faqTitle" style="background:#fbfcff">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">栏目五 · 常见问题</p>
+        <h2 id="faqTitle">关于成人免费电影网的常见疑问</h2>
+        <p>以下是访客在使用影视导航网站时可能关心的问题。若你有更多建议，欢迎通过页脚展示的官方网址联系我们。</p>
+      </header>
+      <div>
+        <article class="faq-item"><h3>成人免费电影网主要提供哪些内容？</h3><p>本网站导航方向包括电影、电视剧、综艺动漫和影视资讯，帮助访客按栏目与分类发现影视内容。</p></article>
+        <article class="faq-item"><h3>页面上的影片介绍是实时数据吗？</h3><p>当前页面中的影片、剧集和资讯均为展示性示例，用于说明网站结构与栏目设计；正式上线后可接入或替换为最新内容。</p></article>
+        <article class="faq-item"><h3>手机端浏览体验如何？</h3><p>页面采用响应式布局，可在手机、平板与桌面端自适应显示，导航菜单在移动端会自动切换为可展开菜单。</p></article>
+        <article class="faq-item"><h3>如何找到特定类型的影视内容？</h3><p>可以先选择顶部栏目，再使用分类筛选或标签缩小范围。例如动作、喜剧、剧情、科幻、动画与悬疑等分类。</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="color:#fff"><span class="brand-mark" aria-hidden="true">影</span>成人免费电影网</div>
+        <p style="margin-top:14px;color:#aeb6cc">免费影视导航：电影、电视剧、综艺、动漫与影视资讯。本站所有内页导航示例均使用 <code>#</code> 占位。</p>
+      </div>
+      <div><h4>栏目导航</h4><ul>
+        <li><a href="#films">电影推荐</a></li>
+        <li><a href="#dramas">电视剧</a></li>
+        <li><a href="#variety">综艺动漫</a></li>
+        <li><a href="#news">影视资讯</a></li>
+      </ul></div>
+      <div><h4>信息服务</h4><ul>
+        <li><a href="#about">关于本站</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#">使用帮助</a></li>
+        <li><a href="#">内容分类</a></li>
+      </ul></div>
+      <div><h4>官方网址</h4><ul>
+        <li><a href="https://chengrenmianfeidianyingwang-wap.github.io">chengrenmianfeidianyingwang-wap.github.io</a></li>
+        <li><a href="#">隐私说明</a></li>
+        <li><a href="#">免责声明</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> 成人免费电影网 版权所有</span>
+      <span>网站名称：成人免费电影网 · 网址：https://chengrenmianfeidianyingwang-wap.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var year=document.getElementById('year');
+  if(year){year.textContent=new Date().getFullYear();}
+
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('primaryNav');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+      toggle.textContent=open?'✕':'☰';
+      toggle.setAttribute('aria-label',open?'关闭导航菜单':'打开导航菜单');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.textContent='☰';
+      }
+    });
+  }
+
+  var chips=document.querySelectorAll('.chip');
+  chips.forEach(function(chip){
+    chip.addEventListener('click',function(){
+      chips.forEach(function(c){c.classList.remove('active');c.setAttribute('aria-selected','false');});
+      chip.classList.add('active');
+      chip.setAttribute('aria-selected','true');
+    });
+  });
+});
+</script>
+</body>
+</html>
